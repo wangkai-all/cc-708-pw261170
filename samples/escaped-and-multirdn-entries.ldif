@@ -1,0 +1,41 @@
+# LDIF export from demo LDAP reception console
+# search base: ou=people,dc=demo,dc=local
+# scope: sub  filter: (objectClass=*)
+version: 1
+
+dn: cn=Doe\, John,ou=people,dc=demo,dc=local
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: Doe, John
+cn: Doe\, John
+givenName: John
+jpegPhoto:: /9j/4AAQSkZJRgABAQD/
+mail: john.doe@demo.local
+mail: j.doe@example.net
+sn: Doe
+telephoneNumber: +1-555-0100
+telephoneNumber: +1-555-0101
+title: Engineer, Platform
+
+dn: cn=Carol \"C\"\+Cao\, \<retired\>\;,ou=people,dc=demo,dc=local
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: Carol "C"+Cao, <retired>;
+cn: Carol \"C\"\+Cao\, \<retired\>\;
+mail: carol@demo.local
+sn: Cao
+title: Escaping Test Case
+
+dn: cn=alice+uid=alice99,ou=people,dc=demo,dc=local
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: alice
+mail: alice@demo.local
+seeAlso: cn=Doe\, John,ou=people,dc=demo,dc=local
+sn: Nguyen
+title: Directory Architect
+uid: alice99
+# relationship: kind=member attr=seealso target=cn=Doe\, John,ou=people,dc=demo,dc=local status=present

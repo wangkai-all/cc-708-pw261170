@@ -1,0 +1,43 @@
+{
+  "dn": "cn=all-staff,ou=groups,dc=demo,dc=local",
+  "range_report": {
+    "attribute": "member",
+    "complete": false,
+    "reason": null,
+    "coverage": {
+      "segments": 2,
+      "first_index": 0,
+      "last_index": 2,
+      "missing_indices": [],
+      "total_values": 3
+    },
+    "segments": [
+      {
+        "index": 0,
+        "request_tag": "member",
+        "response_tag": "member;range=0-*",
+        "low": 0,
+        "high": null,
+        "count": 3,
+        "expected_next_low": 3
+      },
+      {
+        "index": 1,
+        "request_tag": "member;range=3-*",
+        "response_tag": "member;range=3-*",
+        "low": 3,
+        "high": null,
+        "count": 0,
+        "expected_next_low": 3
+      }
+    ],
+    "faults": [
+      {
+        "kind": "stall",
+        "detail": "empty segment at low=3 with no concrete upper bound",
+        "segment_index": 1
+      }
+    ]
+  },
+  "attribute_complete_flag": false
+}

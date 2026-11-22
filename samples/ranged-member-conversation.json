@@ -1,0 +1,72 @@
+{
+  "dn": "cn=all-staff,ou=groups,dc=demo,dc=local",
+  "range_report": {
+    "attribute": "member",
+    "complete": true,
+    "reason": null,
+    "coverage": {
+      "segments": 4,
+      "first_index": 0,
+      "last_index": 9,
+      "missing_indices": [],
+      "total_values": 10
+    },
+    "segments": [
+      {
+        "index": 0,
+        "request_tag": "member",
+        "response_tag": "member;range=0-*",
+        "low": 0,
+        "high": null,
+        "count": 3,
+        "expected_next_low": 3
+      },
+      {
+        "index": 1,
+        "request_tag": "member;range=3-*",
+        "response_tag": "member;range=3-*",
+        "low": 3,
+        "high": null,
+        "count": 3,
+        "expected_next_low": 6
+      },
+      {
+        "index": 2,
+        "request_tag": "member;range=6-*",
+        "response_tag": "member;range=6-*",
+        "low": 6,
+        "high": null,
+        "count": 3,
+        "expected_next_low": 9
+      },
+      {
+        "index": 3,
+        "request_tag": "member;range=9-*",
+        "response_tag": "member;range=9-9",
+        "low": 9,
+        "high": 9,
+        "count": 1,
+        "expected_next_low": 10
+      }
+    ],
+    "faults": []
+  },
+  "assembled_value_count": 10,
+  "first_three_values": [
+    {
+      "kind": "text",
+      "size": 36,
+      "value": "cn=user00,ou=people,dc=demo,dc=local"
+    },
+    {
+      "kind": "text",
+      "size": 36,
+      "value": "cn=user01,ou=people,dc=demo,dc=local"
+    },
+    {
+      "kind": "text",
+      "size": 36,
+      "value": "cn=user02,ou=people,dc=demo,dc=local"
+    }
+  ]
+}

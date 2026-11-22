@@ -32,3 +32,4 @@ test-results/
 *.sqlite3-shm
 *.sqlite3-journal
 !*.traineddata.gz
+.pytest_cache/

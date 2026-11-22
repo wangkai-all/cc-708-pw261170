@@ -1,0 +1,14 @@
+{
+  "alias_dn": "cn=alias-a,ou=aliases,dc=demo,dc=local",
+  "status": "cycle",
+  "chain": [
+    "cn=alias-a,ou=aliases,dc=demo,dc=local",
+    "cn=alias-b,ou=aliases,dc=demo,dc=local"
+  ],
+  "resolved_dn": null,
+  "cycle_path": [
+    "cn=alias-a,ou=aliases,dc=demo,dc=local",
+    "cn=alias-b,ou=aliases,dc=demo,dc=local",
+    "cn=alias-a,ou=aliases,dc=demo,dc=local"
+  ]
+}

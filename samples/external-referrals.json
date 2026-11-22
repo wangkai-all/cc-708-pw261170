@@ -1,0 +1,45 @@
+{
+  "entries": [
+    {
+      "dn": "cn=partner-directory,ou=externals,dc=demo,dc=local",
+      "kind": "referral",
+      "relationships": [
+        {
+          "kind": "referral",
+          "attribute": "ref",
+          "target_dn": "dc=partner,dc=com",
+          "external_url": "ldap://other.example.com:389/dc=partner,dc=com??sub",
+          "inside_root": false,
+          "status": "external"
+        },
+        {
+          "kind": "referral",
+          "attribute": "ref",
+          "target_dn": "dc=partner,dc=com",
+          "external_url": "ldaps://backup.example.com:636/dc=partner,dc=com",
+          "inside_root": false,
+          "status": "external"
+        }
+      ]
+    },
+    {
+      "dn": "ou=remote-users,ou=externals,dc=demo,dc=local",
+      "kind": "referral",
+      "relationships": [
+        {
+          "kind": "referral",
+          "attribute": "ref",
+          "target_dn": "dc=remote,dc=org",
+          "external_url": "ldap://other.example.com/dc=remote,dc=org??one",
+          "inside_root": false,
+          "status": "external"
+        }
+      ]
+    },
+    {
+      "dn": "ou=externals,dc=demo,dc=local",
+      "kind": "entry",
+      "relationships": []
+    }
+  ]
+}
